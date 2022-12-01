@@ -1,0 +1,13 @@
+<form action="#">
+  
+  <!-- with pattern attribute -->
+<input type="text" 
+pattern="^[a-zA-Z]+$"/>
+    
+    <!-- with javascript helper function -->
+<input type="text" onkeyup="(function change(v){
+                               let result = new RegExp('^[a-zA-Z]+$').test(v.value)
+                            console.log(result);
+                            return result;
+                               })(this)"/>
+</form>
